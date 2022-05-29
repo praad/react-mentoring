@@ -1,0 +1,34 @@
+version: '3'
+services:
+  app-dev:
+    container_name: app-dev
+    image: app-dev
+    build:
+      context: ./..
+      dockerfile: docker/Dockerfile
+      target: development
+    volumes:
+      - ./../src:/app/src
+    ports:
+      - 3000:3000
+    environment:
+      - PORT=3000
+      - NODE_ENV=developmen
+      - CHOKIDAR_USEPOLLING=true
+  app-prod:
+    container_name: app-prod
+    image: app-prod
+    build:
+      context: ./..
+      dockerfile: docker/Dockerfile
+      target: production
+    ports:
+      - 8080:80
+  app-test:
+    container_name: app-tests
+    build:
+      context: ./..
+      dockerfile: docker/Dockerfile
+      target: development
+    command: yarn test
+      
