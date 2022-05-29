@@ -1,0 +1,23 @@
+.counterDisplay {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: gray;
+    border: black 1px solid;
+}
+
+.label {
+    color: black;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.value {
+    color: green;
+    font-size: 30px;
+}
+
+.negative {
+    color: red;
+}
