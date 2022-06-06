@@ -1,0 +1,5 @@
+ul.genderToggle li {
+  display: inline;
+  text-transform: uppercase;
+  padding: 5px;
+}
